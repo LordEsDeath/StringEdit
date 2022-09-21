@@ -5,6 +5,8 @@
  */
 package stringedit;
 
+import java.util.Scanner;
+
 /**
  *
  * @author pupil
@@ -15,6 +17,12 @@ public class StringEdit {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        System.out.println("==== StringEdit ====");
+        System.out.println("=====================");
+        System.out.println("Введите текст (Латиницей): ");
+        Scanner scanner = new Scanner(System.in);
+        String str = scanner.nextLine();
+        
         // TODO code application logic here
     }
     
