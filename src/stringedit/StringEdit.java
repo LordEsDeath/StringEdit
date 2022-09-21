@@ -22,6 +22,7 @@ public class StringEdit {
         System.out.println("Введите текст (Латиницей): ");
         Scanner scanner = new Scanner(System.in);
         String str = scanner.nextLine();
+         String.out.println("Количество символов:" +str);
         
         // TODO code application logic here
     }
