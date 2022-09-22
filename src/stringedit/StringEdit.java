@@ -33,7 +33,7 @@ public class StringEdit {
             scanner.nextLine();
             switch (number) {
                 case 0:
-                    break OUTER;
+                    break;
                 case 1:
                     System.out.println("Вы выбрали пункт "+number);
                     System.out.println("Количество символов: "+str.length());
@@ -56,25 +56,11 @@ public class StringEdit {
                     }   break;
                 case 4:
                     System.out.println("Вы выбрали пункт "+number);
-                    System.out.println("Введите заменяемую строку: ");
-                    String removeStirng = scanner.nextLine();
-                    String newStr;
-                    int index = str.indexOf(removeStirng);
-                    if(index < 0 ){
-                        System.out.println("Такой строки в тексте нет");
-                    }else{
-                        System.out.println("На какую строку заменить: ");
-                        newStr = scanner.nextLine();
-                        System.out.println("Измененная строка выглядит так: ");
-                        System.out.println(str.replace(removeStirng, newStr));
-                    }
-            
                     break;
                 default:
                     break;
             }
             System.out.println("+++++++++++++++++++++++++++");
         } while (true);
-        System.out.println("Пока!");
     }
 }
