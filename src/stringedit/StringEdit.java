@@ -20,8 +20,7 @@ public class StringEdit {
         System.out.println("----- Строки в Java -----");
         System.out.println("Введите текст (латиницей): ");
         Scanner scanner = new Scanner(System.in);
-        String str = scanner.nextLine();
-        OUTER: 
+        String str = scanner.nextLine(); 
         do {
             System.out.println("Функции программы:");
             System.out.println("0. Выход из программы");
@@ -57,6 +56,19 @@ public class StringEdit {
                     }   break;
                 case 4:
                     System.out.println("Вы выбрали пункт "+number);
+                    System.out.println("Введите заменяемую строку: ");
+                    String removeStirng = scanner.nextLine();
+                    String newStr;
+                    int index = str.indexOf(removeStirng);
+                    if(index < 0 ){
+                        System.out.println("Такой строки в тексте нет");
+                    }else{
+                        System.out.println("На какую строку заменить: ");
+                        newStr = scanner.nextLine();
+                        System.out.println("Измененная строка выглядит так: ");
+                        System.out.println(str.replace(removeStirng, newStr));
+                    }
+            
                     break;
                 default:
                     break;
