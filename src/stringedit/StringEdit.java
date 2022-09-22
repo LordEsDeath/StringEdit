@@ -17,57 +17,52 @@ public class StringEdit {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        System.out.println("==== StringEdit ====");
-        System.out.println("=====================");
-        System.out.println("Введите текст (Латиницей): ");
+        System.out.println("----- Строки в Java -----");
+        System.out.println("Введите текст (латиницей): ");
         Scanner scanner = new Scanner(System.in);
         String str = scanner.nextLine();
-        int numberFunction;
-        int repeat = 1;
-         switch (numberFunction) {
+        OUTER: 
+        do {
+            System.out.println("Функции программы:");
+            System.out.println("0. Выход из программы");
+            System.out.println("1. Вывести количество символов");
+            System.out.println("2. Вывести количество слов");
+            System.out.println("3. Найти слово в строке");
+            System.out.println("4. Заменить указанное слово в строке");
+            System.out.print("Выберите номер функции: ");
+            int number = scanner.nextInt();
+            scanner.nextLine();
+            switch (number) {
                 case 0:
-                    System.out.println("Ну ладно!");
-                    repeat = 0;
-                    break;
+                    break OUTER;
                 case 1:
-                    System.out.println("Вы выбрали функцию \"1. Количество символов в тексте");
-                    char[] strChar = str.toCharArray();
-                    System.out.println("Посчитано: "+strChar.length+ " символов.");
+                    System.out.println("Вы выбрали пункт "+number);
+                    System.out.println("Количество символов: "+str.length());
                     break;
                 case 2:
-                    System.out.println("Вы выбрали функцию: \"2. Количество слов в тексте");
-                    String[] wordArray = str.split(" ");
-                    System.out.println("Посчитано: "+wordArray.length+ " слов.");
+                    System.out.println("Вы выбрали пункт "+number);
+                    String[] words = str.split(" ");
+                    System.out.println("Количество слов: "+ words.length);
                     break;
                 case 3:
-                    System.out.println("Вы выбрали функцию \n3. Находит указанную подстроку в тексте");
-                    System.out.println("Введите подстроку для поиска: ");
+                    System.out.println("Вы выбрали пункт "+number);
+                    System.out.println("Какое слово найти: ");
                     String subStr = scanner.nextLine();
-                    int indexSubStr = str.indexOf(subStr);
-                    if(indexSubStr < 0) {
-                        System.out.println("Такой подстроки в строке нет");
+                    int index = str.indexOf(subStr);
+                    if(index < 0){
+                        System.out.println("Такого слова нет в строке");
                     }else{
-                        indexSubStr++;
-                        System.out.println("Подстрока находится на "+indexSubStr +" позиции в строке");
-                    }
-                    break;
+                        index++;
+                        System.out.println("Указанное слово находится на "+index+" позиции");
+                    }   break;
                 case 4:
-                    System.out.println("Вы выбрали функцию \"4. Заменяет указанную подстроку на другую подстроку.");
-                    System.out.println("Введите подстроку которую надо заменить: ");
-                    subStr = scanner.nextLine();
-                    indexSubStr = str.indexOf(subStr);
-                    if(indexSubStr < 0){
-                        System.out.println("Такой подстроки в строке нет");
-                    }else{
-                        System.out.println("Введите строку замены: ");
-                        String replaceStr = scanner.nextLine();
-                        System.out.println("Результат замены: "+str.replace(subStr, replaceStr));
-                    }
+                    System.out.println("Вы выбрали пункт "+number);
                     break;
                 default:
                     break;
             }
-            System.out.println("------------------------------");
-            if(repeat == 0) break;
+            System.out.println("+++++++++++++++++++++++++++");
         } while (true);
+        System.out.println("Пока!");
+    }
 }
