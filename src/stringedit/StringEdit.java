@@ -20,11 +20,7 @@ public class StringEdit {
         System.out.println("----- Строки в Java -----");
         System.out.println("Введите текст (латиницей): ");
         Scanner scanner = new Scanner(System.in);
-<<<<<<< HEAD
         String str = scanner.nextLine();
-=======
-        String str = scanner.nextLine(); 
->>>>>>> 08c39bcee945a8f6e7efe6d6f9084e40dc62bf8f
         do {
             System.out.println("Функции программы:");
             System.out.println("0. Выход из программы");
@@ -60,28 +56,24 @@ public class StringEdit {
                     }   break;
                 case 4:
                     System.out.println("Вы выбрали пункт "+number);
-                    System.out.println("Введите заменяемую строку: ");
-                    String removeStirng = scanner.nextLine();
+                    System.out.println("Введите слово которое хотите заменить: ");
+                    String remove = scanner.nextLine();
                     String newStr;
-                    index = str.indexOf(removeStirng);
+                    index = str.indexOf(remove);
                     if(index < 0 ){
-                        System.out.println("Такой строки в тексте нет");
+                        System.out.println("Такого слово в тексте нет");
                     }else{
-                        System.out.println("На какую строку заменить: ");
+                        System.out.println("На какое слово заменим же: ");
                         newStr = scanner.nextLine();
-                        System.out.println("Измененная строка выглядит так: ");
-                        System.out.println(str.replace(removeStirng, newStr));
+                        System.out.println("Измененная слов выглядит так: ");
+                        System.out.println(str.replace(remove, newStr));
                     }
                     break;
                 default:
                     break;
             }
-            System.out.println("+++++++++++++++++++++++++++");
+            System.out.println("--------------------------------------");
         } while (true);
-<<<<<<< HEAD
-        
 
-=======
->>>>>>> 08c39bcee945a8f6e7efe6d6f9084e40dc62bf8f
     }
 }
