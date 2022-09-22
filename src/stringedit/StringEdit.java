@@ -20,7 +20,11 @@ public class StringEdit {
         System.out.println("----- Строки в Java -----");
         System.out.println("Введите текст (латиницей): ");
         Scanner scanner = new Scanner(System.in);
+<<<<<<< HEAD
         String str = scanner.nextLine();
+=======
+        String str = scanner.nextLine(); 
+>>>>>>> 08c39bcee945a8f6e7efe6d6f9084e40dc62bf8f
         do {
             System.out.println("Функции программы:");
             System.out.println("0. Выход из программы");
@@ -74,7 +78,10 @@ public class StringEdit {
             }
             System.out.println("+++++++++++++++++++++++++++");
         } while (true);
+<<<<<<< HEAD
         
 
+=======
+>>>>>>> 08c39bcee945a8f6e7efe6d6f9084e40dc62bf8f
     }
 }
